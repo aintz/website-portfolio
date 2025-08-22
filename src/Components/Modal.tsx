@@ -1,5 +1,3 @@
-//import  farmingFriends  from '../assets/farming-friends.jpg'
-//import  ageVerification  from '../assets/age-verification.jpg'
 import  close  from '../assets/close.png'
 import  arrow  from '../assets/active.png'
 import { useState, useEffect, useRef} from 'react'
@@ -12,9 +10,6 @@ type ModalTypes = {
   modal: modal,
   setModal: React.Dispatch<React.SetStateAction<modal>>
 }
-
-//const farmingFriends = 'https://cdn.jsdelivr.net/gh/aintz/portfolio-cdn/farming-friends-min.jpg'
-//const ageVerification = 'https://cdn.jsdelivr.net/gh/aintz/portfolio-cdn/age-verification-min.jpg'
 
 const farmingFriendsParts = [
   'https://raw.githubusercontent.com/aintz/portfolio-cdn/main/farming-friends-min-1.jpg',
@@ -52,7 +47,7 @@ export default function Modal({ modal, setModal }:ModalTypes) {
   }
 
 
-  const openKey = Object.entries(modal).find(([_, value]) => value === 'open')?.[0] as ModalKeys
+  const openKey = Object.entries(modal).find(([_, value]) => value === 'open')?.[0] as ModalKeys // eslint-disable-line @typescript-eslint/no-unused-vars
 
 
   const [activeIndex, setActiveIndex] = useState(0);
